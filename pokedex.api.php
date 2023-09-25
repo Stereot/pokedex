@@ -23,11 +23,27 @@ if(isset($_POST["buscar_pokemon"])){
         foreach ($results as $row) {
 ?>
             <html>
+        
+                <center>
+                
                 <p>
-                    <button id=<?=$row['dex_number'];?> style="width:100%" class="btn-primary exibir_informacoes"><?= $row['nome'];?></button>
+                    <div class="card" style="width: 18rem; background-image:url(./favicon/background_prairie_pokemon_screencapture_by_nemotrex_de8nlib-fullview.jpg)">
+                    <img src=<?= $row['link_foto'];?> class="card-img-top">
+                    <div class="card-body">
+                    <h5 class="card-title"><?= $row['nome'];?></h5>
+                    <p class="card-descricao">Descrição: <?= $row['descricao'];?></p>
+                    <p class="card-ataque">Ataque: <?= $row['atk'];?></p>
+                    <p class="card-atackspeed">Velocidade de Ataque: <?= $row['spattack'];?></p>
+                    <p class="card-DEFESA">Defesa: <?= $row['def'];?></p>
+                    <p class="card-SUPERDEFESA">Velocidade de defesa: <?= $row['spdef'];?></p>
+                    <p class="card-speed">Velocidade: <?= $row['vel'];?></p>
+                    <p class="card-HP">Vida: <?= $row['hp'];?></p>
+                    <p class="card-Dexnumber">Numero Dex: <?= $row['dex_number'];?></p>
+                    
+                    
                     
                 </p>
-
+                </center>
                 
             </html>
             
